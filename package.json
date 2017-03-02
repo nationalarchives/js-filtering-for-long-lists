@@ -1,0 +1,28 @@
+{
+  "name": "js-filtering-for-long-lists",
+  "version": "1.0.0",
+  "description": "## Purpose",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "gulp-qunit": "^1.5.0",
+    "gulp": "^3.9.1",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nationalarchives/js-filtering-for-long-lists.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nationalarchives/js-filtering-for-long-lists/issues"
+  },
+  "homepage": "https://github.com/nationalarchives/js-filtering-for-long-lists#readme"
+}
