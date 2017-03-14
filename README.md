@@ -27,18 +27,17 @@ To progressively enhance _very_ long lists of links (several thousand) to provid
 
 ## Development environment setup
 
-Uses [GulpJS](http://gulpjs.com/) for task automation with [QUnit](https://qunitjs.com/) plugin.
+Uses [Grunt](http://gruntjs.com/) for task automation with core team's [QUnit](https://qunitjs.com/) plugin.
 
-### Setting up GulpJS
+### Setting up GruntJS
 
 Type these commands from the project root.
 
 ```bash
-npm install gulp-cli -g
-npm install gulp -D
-npm install --save-dev gulp-qunit
+npm install -g grunt-cli
+npm install
 ```
 
 ### Running tests
 
-All tests are placed within the `/tests/tests.js` directory and run against the fixture within `tests/test-runner.html`. Run tests with the ```gulp test``` command
+All tests are placed within the `/tests/tests.js` directory and run against the fixture within `tests/test-runner.html`. Run tests with the ```grunt test``` command
