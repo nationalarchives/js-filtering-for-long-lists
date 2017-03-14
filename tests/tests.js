@@ -5,4 +5,10 @@ QUnit.test("jQuery exists", function (assert) {
 QUnit.test("Modernizr exists", function (assert) {
     assert.equal(typeof Modernizr, 'object', "Modernizr exists");
     assert.equal(typeof Modernizr.indexeddb, 'object', "Modernizr detect for IndexedDb is present");
+
+    var detects = ['js', 'indexeddb'];
+
+        detects.forEach(function (index) {
+        assert.ok($('html').hasClass(index), "Modernizr has added " + index + " class to html")
+    })
 });
