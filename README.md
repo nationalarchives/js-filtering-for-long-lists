@@ -25,6 +25,13 @@ To progressively enhance _very_ long lists of links (several thousand) to provid
         - renders the results to the page
         - updates any ARIA information
 
+### Tasks
+
+- [x] Prepare development environment with GruntJS, QUnit
+- [x] Introduce jQuery with tests
+- [x] Introduce Modernizr with tests
+- [ ] Add function that creates a data structure representing every relevant link
+
 ## Development environment setup
 
 Uses [Grunt](http://gruntjs.com/) for task automation with core team's [QUnit](https://qunitjs.com/) plugin.
