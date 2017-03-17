@@ -3,6 +3,12 @@ module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        eslint: {
+            target: "js/src/*.js",
+            options: {
+                configFile: 'conf/eslint.json'
+            }
+        },
         babel: {
             options: {
                 sourceMap: true,
@@ -20,19 +26,20 @@ module.exports = function (grunt) {
         watch: {
             scripts: {
                 files: ['js/src/*.js', 'tests/*.js'],
-                tasks: ['babel', 'qunit'],
+                tasks: ['eslint', 'babel', 'qunit'],
                 options: {
-                    spawn: false,
-                },
-            },
-        },
+                    spawn: false
+                }
+            }
+        }
     });
 
+    grunt.loadNpmTasks('grunt-eslint');
     grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task(s).
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['eslint', 'babel', 'qunit', 'watch']);
 
 };
