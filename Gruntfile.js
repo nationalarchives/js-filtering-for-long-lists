@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     // Project configuration.
     grunt.initConfig({
@@ -16,13 +16,23 @@ module.exports = function(grunt) {
         },
         qunit: {
             all: ['tests/test-runner.html']
-        }
+        },
+        watch: {
+            scripts: {
+                files: ['js/src/*.js', 'tests/*.js'],
+                tasks: ['babel', 'qunit'],
+                options: {
+                    spawn: false,
+                },
+            },
+        },
     });
 
     grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-qunit');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task(s).
-    grunt.registerTask('default', ['babel', 'qunit']);
+    grunt.registerTask('default', ['watch']);
 
 };
